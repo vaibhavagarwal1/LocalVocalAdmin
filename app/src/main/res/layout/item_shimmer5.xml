@@ -1,0 +1,72 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="500dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E7E7E7" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="220dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E7E7E7" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="110dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E7E7E7" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="60dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E7E7E7" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.cardview.widget.CardView>

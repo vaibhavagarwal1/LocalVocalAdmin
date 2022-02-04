@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.ShopDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Back Button-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/backCv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="44dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#99474747" />
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:background="@drawable/ic_arrow_back_white" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Profile Image CircleImageView-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="160dp"
+            android:elevation="10dp"
+            android:src="@drawable/user"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="4dp" />
+
+        <!--Shop ImageView-->
+        <ImageView
+            android:id="@+id/productImageIv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
+
+        <!--Map ImageView-->
+        <ImageView
+            android:id="@+id/mapIv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/productImageIv"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/callSellerLl"
+            android:src="@drawable/ic_map"
+            app:tint="@color/blue" />
+
+        <!--Call Seller LinearLayout-->
+        <LinearLayout
+            android:id="@+id/callSellerLl"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@id/productImageIv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_phone"
+                app:tint="@color/blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:letterSpacing="0.01"
+                android:padding="2.5dp"
+                android:text="Call Seller"
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--Seller Name And Address RelativeLayout-->
+        <RelativeLayout
+            android:id="@+id/detailsRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileIv"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/textColor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/addressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTv"
+                android:text=""
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <!--Shop Status Label TextView-->
+        <TextView
+            android:id="@+id/statusLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailsRl"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="S T A T U S"
+            android:textColor="@color/grey"
+            android:textSize="8sp" />
+
+        <!--Shop Status TextView-->
+        <TextView
+            android:id="@+id/statusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/statusLabelTv"
+            android:layout_marginStart="20dp"
+            android:text=""
+            android:textColor="@color/colorGreen"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!--Shop Name and Mobile LinearLayout-->
+        <LinearLayout
+            android:id="@+id/shopsLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/statusTv"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <!--Shop Name LinearLayout-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S H O P   N A M E"
+                    android:textColor="@color/grey"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/shopNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_bold"
+                    android:text=""
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!--Shop Mobile LinearLayout-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="M O B I L E"
+                    android:textColor="@color/grey"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/phoneTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_bold"
+                    android:text=""
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shopDetailsLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shopsLl"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S H O P   C I T Y"
+                    android:textColor="@color/grey"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/shopCityTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_bold"
+                    android:text=""
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D E L I V E R Y   F E E"
+                    android:textColor="@color/grey"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/feeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_bold"
+                    android:text=""
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/locationLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shopDetailsLl"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="D E L I V E R S   T O"
+            android:textColor="@color/grey"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/locationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationLabelTv"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/muli_bold"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/emailLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/locationTv"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="E - M A I L"
+            android:textColor="@color/grey"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailLabelTv"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/muli_bold"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/minOrderValLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailTv"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="M I N I M U M   O R D E R   V A L U E"
+            android:textColor="@color/grey"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/minOrderValueTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/minOrderValLabelTv"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/muli_bold"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/buttonsLl"
+            android:layout_below="@id/minOrderValueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/approvalButtonsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/acceptBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue_button"
+                    android:text="Accept"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/declineBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_input_red"
+                    android:text="Decline"
+                    android:textColor="@color/blue" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editButtonsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/editBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue_button"
+                    android:text="Edit Shop"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_input_red"
+                    android:text="Delete Shop"
+                    android:textColor="@color/blue" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/editButtonsLl"
+                android:layout_marginTop="20dp"
+                android:background="#F4F4F4" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/productHeadingTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonsLl"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="Products"
+            android:textColor="@color/textColor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/filterProductsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonsLl"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="Showing All"
+            android:textColor="@color/blue"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/searchRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productHeadingTv"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp">
+
+            <EditText
+                android:id="@+id/searchShopsEt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/border_input"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/grey"
+                android:hint="Search..."
+                android:padding="10dp"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/filterBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/border_input"
+                android:src="@drawable/ic_filter_black"
+                app:tint="@color/grey" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchRl"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:reverseLayout="true"
+            app:stackFromEnd="true"
+            tools:itemCount="3"
+            tools:listitem="@layout/row_products" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/productsSfl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchRl"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/item_shimmer4" />
+
+                <include layout="@layout/item_shimmer4" />
+
+                <include layout="@layout/item_shimmer4" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <LinearLayout
+            android:id="@+id/noProductsLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchRl"
+            android:layout_marginVertical="70dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_shops" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Products Available"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

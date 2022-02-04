@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".activities.LoginActivity">
+
+    <TextView
+        android:id="@+id/welcomeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/muli_bold"
+        android:text="Welcome"
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:id="@+id/text2Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeTv">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:text="Enter your phone number or email\nfor Sign in"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/logoIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/text2Tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/logo_color" />
+
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_input"
+        android:drawableStart="@drawable/ic_person"
+        android:layout_below="@id/logoIv"
+        android:drawablePadding="15dp"
+        android:hint="Phone or email"
+        android:padding="15dp"
+        android:textColor="@color/textColor"
+        android:textColorHint="#9FA5C0"
+        android:inputType="textEmailAddress"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/passwordEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/emailEt"
+        android:background="@drawable/border_input"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="15dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="@color/textColor"
+        android:textColorHint="#9FA5C0"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/forgetPasswordTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/passwordEt"
+        android:layout_marginTop="15dp"
+        android:text="Forgot Password?"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/loginRl"
+        android:layout_below="@id/forgetPasswordTv"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/blue_button_rounded">
+
+        <TextView
+            android:id="@+id/loginTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Log In"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/loginPb"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/white"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

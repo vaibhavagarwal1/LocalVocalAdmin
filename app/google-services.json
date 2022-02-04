@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "855410124930",
+    "firebase_url": "https://localvocalapp-bdfe9-default-rtdb.firebaseio.com",
+    "project_id": "localvocalapp-bdfe9",
+    "storage_bucket": "localvocalapp-bdfe9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855410124930:android:3990b767738b423587ec9b",
+        "android_client_info": {
+          "package_name": "com.dev.localvocaladmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855410124930-cl29btii1dpqtr3m7jpm394mlmon6j9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxUwFcn0qDT3AxDMGxngwBRQgeQsrXp7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855410124930-cl29btii1dpqtr3m7jpm394mlmon6j9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855410124930:android:1706ec5e2d87948187ec9b",
+        "android_client_info": {
+          "package_name": "com.preritrajput.localvocalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855410124930-53c23iubpt1idhbkff74nsnk8n3bk023.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.preritrajput.localvocalapp",
+            "certificate_hash": "798af302d97ba2cf52005d453fbca0930f6ad727"
+          }
+        },
+        {
+          "client_id": "855410124930-nueq2b8pdch14liia18r7fm30l8f14lb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.preritrajput.localvocalapp",
+            "certificate_hash": "e491cd6a837cd872e8574d914cd16384791763b8"
+          }
+        },
+        {
+          "client_id": "855410124930-cl29btii1dpqtr3m7jpm394mlmon6j9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxUwFcn0qDT3AxDMGxngwBRQgeQsrXp7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855410124930-cl29btii1dpqtr3m7jpm394mlmon6j9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

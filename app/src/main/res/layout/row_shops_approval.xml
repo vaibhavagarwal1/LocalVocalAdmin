@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="15dp"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/productImageIv"
+        android:layout_width="70dp"
+        android:layout_height="70dp" />
+
+    <TextView
+        android:id="@+id/shopNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="6dp"
+        android:layout_toEndOf="@id/productImageIv"
+        android:ellipsize="end"
+        android:fontFamily="@font/muli_bold"
+        android:maxWidth="120dp"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/textColor"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/shopCategoryTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopNameTv"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toEndOf="@id/productImageIv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/grey"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/lineLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopCategoryTv"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/productImageIv"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/shopStatusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorGreen"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/feeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineLl"
+        android:layout_alignParentEnd="true"
+        android:text=""
+        android:textColor="@color/grey"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/dateTv"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/productImageIv"
+        android:background="#CACACA" />
+
+</RelativeLayout>
